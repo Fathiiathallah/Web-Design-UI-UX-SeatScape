@@ -1,0 +1,594 @@
+/* --- CSS VARIABLES (Warna, Font, & Efek Ultra-Premium) --- */
+:root {
+    --brand-brown: #73563F;
+    --brand-brown-dark: #4A3525;
+    --brand-gold: #B8926A; 
+    --brand-beige: #E3D8C8;
+    --brand-text: #3D2B1F; 
+    --font-main: 'Poppins', sans-serif;
+    --white-light: rgba(255, 255, 255, 0.3);
+    --white-med: rgba(255, 255, 255, 0.5);
+    
+    /* Variabel Font  */
+    --font-heading: 'Playfair Display', serif; 
+    --font-main: 'Poppins', sans-serif;        
+    
+    --white-light: rgba(255, 255, 255, 0.3);
+    --white-med: rgba(255, 255, 255, 0.5);
+
+    /* Shadow  */
+    --shadow-soft: 0 20px 40px -10px rgba(115, 86, 63, 0.15);
+    --shadow-hover: 0 30px 60px -15px rgba(184, 146, 106, 0.3);
+    --shadow-inner: inset 0 2px 4px rgba(255, 255, 255, 0.4);
+    
+    /* Animasi */
+    --transition-smooth: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* --- GLOBAL RESET --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--brand-beige);
+    color: var(--brand-text);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Tekstur noise sangat halus untuk kesan kertas premium (opsional) */
+    background-image: radial-gradient(rgba(115, 86, 63, 0.03) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+/* Terapkan font heading ke semua tag judul */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+}
+
+/* Custom scrollbar elegan */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: var(--brand-beige); 
+}
+::-webkit-scrollbar-thumb {
+    background: var(--brand-gold); 
+    border-radius: 10px;
+    border: 2px solid var(--brand-beige); /* Memberi jarak/padding pada scrollbar */
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--brand-brown); 
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-smooth);
+}
+
+/* --- HEADER / NAVBAR --- */
+.header {
+    background-color: rgba(115, 86, 63, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 13px;
+    position: fixed; 
+    width: 100%; 
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.2), var(--shadow-inner);
+    transition: var(--transition-smooth);
+}
+
+.header-container {
+    max-width: 1152px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Styling Logo Baru */
+.logo-link {
+    display: flex;
+    align-items: center;
+}
+
+.brand-logo {
+    height: 35px;
+    width: auto;
+    object-fit: contain;
+    transition: var(--transition-bounce);
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.15));
+}
+
+.brand-logo:hover {
+    transform: scale(1.1) rotate(-3deg); 
+    filter: drop-shadow(0 8px 12px rgba(0,0,0,0.25));
+}
+
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+/* Search Bar Ultra-Premium */
+.search-bar {
+    position: relative;
+}
+
+.search-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #a0aabf;
+    font-size: 0.9rem;
+    transition: var(--transition-bounce);
+    z-index: 2;
+}
+
+.search-input {
+    padding: 0.6rem 1.2rem 0.6rem 2.8rem;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.1); /* Transparan awalnya */
+    color: white;
+    font-size: 0.9rem;
+    width: 15rem;
+    outline: none;
+    font-family: var(--font-main);
+    transition: var(--transition-bounce);
+    backdrop-filter: blur(4px);
+}
+
+.search-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.search-input:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.search-input:focus {
+    border-color: var(--brand-beige);
+    background-color: #ffffff;
+    color: var(--brand-text);
+    box-shadow: 0 0 0 5px rgba(227, 216, 200, 0.2);
+    width: 23rem; 
+}
+
+.search-input:focus::placeholder {
+    color: #a0aabf;
+}
+
+.search-input:focus + .search-icon {
+    color: var(--brand-brown);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+}
+
+.nav-links a {
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+/* Garis bawah animasi yang lebih organik */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background: linear-gradient(90deg, transparent, var(--brand-beige), transparent);
+    transition: var(--transition-smooth);
+    transform: translateX(-50%);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    color: var(--brand-beige);
+    text-shadow: 0 0 15px rgba(255,255,255,0.5);
+}
+
+.user-icon a {
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.05);
+    transition: var(--transition-bounce);
+}
+
+.user-icon a:hover {
+    color: var(--brand-brown);
+    background-color: var(--brand-beige);
+    border-color: var(--brand-beige);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* --- ABOUT INTRO SECTION --- */
+.about-section {
+    background: linear-gradient(135deg, var(--brand-brown-dark) 0%, var(--brand-brown) 100%);
+    color: white;
+    padding: 6rem 1.5rem 7rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Aksen lingkaran blur di background untuk kesan depth */
+.about-section::before {
+    content: '';
+    position: absolute;
+    top: -50%; right: -10%;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(184, 146, 106, 0.2) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.container-md {
+    max-width: 1080px; /* Diperlebar sedikit */
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.section-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    /* Text Gradient Elegan */
+    background: linear-gradient(to right, #ffffff 30%, var(--brand-beige) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 4px 12px rgba(0,0,0,0.2));
+}
+
+.section-subtitle {
+    font-size: 1rem;
+    margin-top: 1rem;
+    color: var(--brand-gold);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.about-img-wrapper {
+    width: 473.25px; /* Lebar statis yang diminta */
+    max-width: 100%; /* Memastikan tidak jebol di layar kecil */
+    aspect-ratio: 1 / 1; /* Memaksa kotak sama sisi */
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 2rem;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255,255,255,0.15);
+    position: relative;
+    transform: perspective(800px) rotateY(0deg); /* Efek 3D ringan */
+    transition: var(--transition-smooth);
+}
+
+.about-img-wrapper:hover {
+    transform: perspective(1000px) rotateY(0deg) translateY(-10px);
+    box-shadow: 0 35px 60px rgba(0, 0, 0, 0.5);
+}
+
+.about-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.about-img-wrapper:hover .about-img {
+    transform: scale(1.1); 
+}
+
+.about-text h2 {
+    font-size: 1.85rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+}
+
+.about-text p {
+    font-size: 1.15rem;
+    line-height: 1.85;
+    color: rgba(255,255,255,0.85);
+    font-weight: 300;
+}
+
+/* --- MAIN CONTENT (Store & Products) --- */
+.main-content {
+    padding: 8rem 1.5rem;
+    background: linear-gradient(to bottom, var(--brand-beige) 0%, #E8E0D3 100%);
+}
+
+.features-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10rem; 
+}
+
+.feature-row {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 6rem;
+    align-items: center;
+}
+
+.feature-text h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    /* Text Gradient untuk Judul Konten */
+    background: linear-gradient(135deg, var(--brand-brown-dark) 0%, var(--brand-brown) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.03em;
+}
+
+.feature-text p {
+    font-size: 1.2rem;
+    line-height: 1.85;
+    margin-bottom: 2rem;
+    color: var(--brand-text);
+}
+
+.feature-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.feature-list li {
+    margin-bottom: 1.25rem;
+    font-size: 1.15rem;
+    position: relative;
+    padding-left: 2.5rem;
+    font-weight: 500;
+    transition: var(--transition-smooth);
+}
+
+.feature-list li:hover {
+    color: var(--brand-brown);
+    transform: translateX(5px);
+}
+
+.feature-list li::before {
+    content: "\f00c"; 
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: white;
+    background: linear-gradient(135deg, var(--brand-gold) 0%, var(--brand-brown) 100%);
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 0.75rem;
+    position: absolute;
+    left: 0;
+    top: 0.2rem;
+    box-shadow: 0 4px 10px rgba(184, 146, 106, 0.4);
+    transition: var(--transition-bounce);
+}
+
+.feature-list li:hover::before {
+    transform: scale(1.2) rotate(360deg);
+}
+
+.feature-img-wrapper {
+    width: 473.25px; /* Lebar statis yang diminta */
+    max-width: 100%; /* Memastikan tidak jebol di layar kecil */
+    aspect-ratio: 1 / 1; /* Memaksa kotak sama sisi */
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 2rem;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255,255,255,0.15);
+    position: relative;
+    transform: perspective(800px) rotateY(0deg); /* Efek 3D ringan */
+    transition: var(--transition-smooth);
+}
+
+.feature-img-wrapper:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-12px); 
+    border-color: rgba(255,255,255,0.8);
+}
+
+.feature-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.feature-img-wrapper:hover .feature-img {
+    transform: scale(1.08);
+}
+
+/* --- LOCATION SECTION --- */
+.location-section {
+    background-color: var(--brand-brown);
+    background-image: radial-gradient(circle at top right, #8c6a4f 0%, var(--brand-brown-dark) 80%);
+    color: white;
+    padding: 6rem 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.location-title {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    justify-content: center;
+    text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.map-wrapper {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    border-radius: 2.5rem;
+    overflow: hidden;
+    box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.6);
+    border: 10px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition-smooth);
+}
+
+.map-wrapper:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+/* Mengatur ukuran iframe agar full satu kotak */
+.map-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    filter: contrast(1.15) saturate(1.1) brightness(0.9);
+    transition: filter 0.5s ease;
+}
+
+.map-wrapper:hover .map-iframe {
+    filter: contrast(1) saturate(1.2) brightness(1);
+}
+
+/* --- FOOTER STYLING (VERSI RINGKAS) --- */
+.footer-main {
+    background-color: #D4C7B5;
+    padding: 40px 0 20px 0; /* Dikurangi dari 80px */
+    color: #4A3B32;
+    width: 100%;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 40px; /* Dikurangi dari 80px */
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Dikurangi dari 20px agar item lebih rapat */
+}
+
+.footer-title {
+    font-size: 20px; /* Dikurangi dari 24px */
+    font-weight: bold;
+    position: relative;
+    margin-bottom: 15px; /* Dikurangi dari 20px */
+    display: inline-block;
+}
+
+.footer-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 30px; /* Sedikit diperpendek */
+    height: 3px;
+    background-color: #614636;
+}
+
+.footer-item {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Dikurangi dari 15px */
+}
+
+.icon-circle {
+    background-color: white;
+    width: 32px; /* Dikurangi dari 40px */
+    height: 32px; /* Dikurangi dari 40px */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.icon-circle i {
+    font-size: 14px; /* Icon menyesuaikan lingkaran yang lebih kecil */
+    color: #614636;
+}
+
+.footer-item p {
+    font-size: 14px; /* Dikurangi dari 16px */
+    font-weight: 500;
+}
+
+.footer-bottom {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+    border-top: 1px solid #D2C4B5;
+    padding-top: 20px; /* Dikurangi dari 30px */
+    font-size: 13px; /* Sedikit lebih kecil */
+    color: #888;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+
+.footer-link:hover {
+    opacity: 0.7;
+}
