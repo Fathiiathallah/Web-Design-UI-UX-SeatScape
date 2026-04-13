@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* BACKGROUND */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: url("images/bgg.jpeg") no-repeat center center/cover;
+}
+
+/* HEADER */
+.top-header {
+  width: 100%;
+  background: #7B5233;
+  padding: 12px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 220px;
+  display: block;
+}
+
+/* WRAPPER */
+.wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.4);
+}
+
+/* TEXT ATAS */
+.welcome-text {
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.title-main {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.title-sub {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-style: italic;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+/* CARD */
+.card {
+  width: 360px;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(15px);
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  color: white;
+}
+
+/* TEXT */
+.card h3 {
+  margin-bottom: 5px;
+}
+
+.login-text {
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.login-text span {
+  color: #ffd369;
+  cursor: pointer;
+}
+
+/* INPUT */
+.input-group {
+  position: relative;
+  margin: 10px 0;
+}
+
+.input-group i {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #7B5233;
+  background: rgba(255,255,255,0.7);
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 12px 12px 50px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+/* FORGOT PASSWORD */
+.forgot-password {
+  text-align: right;
+  font-size: 12px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: #ffd369;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+/* BUTTON */
+.btn-primary {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: #f3e8d9;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #7B5233;
+}
+
+.btn-secondary {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .card {
+    width: 90%;
+  }
+
+  .title-main {
+    font-size: 32px;
+  }
+
+  .title-sub {
+    font-size: 18px;
+  }
+}
