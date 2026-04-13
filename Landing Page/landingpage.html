@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seatscape Web</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="landingpage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo Icon -->
+            <div class="logo">
+                <img src="../Images/Logo.png" class="img-class" style="height: 45px; width: auto;">
+            </div>
+
+            <!-- Search and Nav Links -->
+            <div class="nav-wrapper">
+                <!-- Search Bar -->
+                <div class="search-bar">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" placeholder="Search" class="search-input">
+                </div>
+                
+                <!-- Links -->
+                <nav class="nav-links">
+                    <a href="../Landing Page/landingpage.html">Home</a>
+                    <a href="../about/about.html">About</a>
+                </nav>
+            </div>
+
+            <!-- User Icon -->
+            <div class="user-icon">
+                <a href="../Login Section/index_login.html">
+                    <i class="fa-regular fa-user"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION (Gambar Utama & Judul) -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>See it.<br>Book it.<br>Enjoy it.</h1>
+            <button class="btn-primary">BOOK YOUR SEAT NOW</button>
+        </div>
+    </section>
+
+<!-- WHY CHOOSE US SECTION -->
+<section class="features">
+    <div class="features-container">
+        <div class="features-title">
+            <h2>Why<br>Choose<br>AdoreU<br>Space?</h2>
+        </div>
+        <div class="features-grid">
+            <!-- Card 1 -->
+            <div class="feature-card">
+                <div class="icon-wrapper">
+                    <i class="fa-solid fa-mug-hot"></i>
+                </div>
+                <h3>Specialty Coffee</h3>
+                <p>Enjoy a selection of the finest curated coffee beans brewed by our experienced baristas.</p>
+            </div>
+            <!-- Card 2 -->
+            <div class="feature-card">
+                <div class="icon-wrapper">
+                    <i class="fa-solid fa-wifi"></i>
+                </div>
+                <h3>Free Wi-Fi</h3>
+                <p>High-speed connection for your productivity in every corner of our seat spot, no more lagging.</p>
+            </div>
+            <!-- Card 3 -->
+            <div class="feature-card">
+                <div class="icon-wrapper">
+                    <i class="fa-solid fa-chair"></i>
+                </div>
+                <h3>Spacious Seat</h3>
+                <p>Comfortable interior design and spacious seats, suitable for work or even relaxing.</p>
+            </div>
+            <!-- Card 4 -->
+            <div class="feature-card">
+                <div class="icon-wrapper">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <h3>Strategic Location</h3>
+                <p>Located in the city center, making it a perfect meeting point for gatherings.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- LIVE STATUS SECTION (Live Viewing & Floor Plan Side-by-Side) -->
+<section class="live-status-section">
+    <div class="status-main-container">
+        
+        <div class="status-column">
+    <div class="live-header">
+        <div class="header-main">
+            <span class="pulse-icon"></span>
+            <span class="status-text">Live Status</span>
+        </div>
+        <div class="header-sub">Updated: <span id="current-time">14:30</span></div>
+    </div>
+
+    <div class="live-body">
+        <!-- Area Atas: Chart & Indikator Kesibukan -->
+        <div class="main-stats">
+            <div class="chart-container">
+                <div class="donut-chart-std">
+                    <span class="percentage">70%</span>
+                </div>
+                <p class="availability-label">Available</p>
+            </div>
+            
+            <div class="busy-indicator">
+                <p class="busy-title">Current Vibe</p>
+                <div class="vibe-badge">Quiet / Not Busy</div>
+                <div class="peak-hours-mini">Next peak: 19:00</div>
+            </div>
+        </div>
+
+        <!-- Area Bawah: Tombol & Progress Bar -->
+        <div class="stat-details">
+            <div class="stat-item">
+                <div class="stat-info">
+                    <span>Available</span>
+                    <span class="count">12 Seats</span>
+                </div>
+                <div class="progress-bar-bg"><div class="progress-fill green" style="width: 70%;"></div></div>
+            </div>
+
+            <div class="stat-item">
+                <div class="stat-info">
+                    <span>Occupied</span>
+                    <span class="count">5 Seats</span>
+                </div>
+                <div class="progress-bar-bg"><div class="progress-fill red" style="width: 30%;"></div></div>
+            </div>
+        </div>
+        
+        <button class="refresh-action-btn">
+            <i class="fa-solid fa-rotate-right"></i> Check Availability
+        </button>
+    </div>
+</div>
+
+        <!-- Kolom Kanan: Floor Plan -->
+        <div class="status-column">
+            <h3 class="floor-title-internal">EXPLORE OUR SPACE</h3>
+            <div class="floor-wrapper-compact">
+                <div class="floor-tag-small"><i class="fa-solid fa-expand"></i> Hover to Zoom</div>
+                <img src="../Images/Floor-plan.jpeg" alt="Floor Plan AdoreU" class="floor-img-compact">
+            </div>
+            
+            <!-- Legend Internal -->
+            <div class="floor-legend-internal">
+                <span><i class="fa-solid fa-door-open"></i> Main Entry</span>
+                <span><i class="fa-solid fa-couch"></i> Seating Area</span>
+                <span><i class="fa-solid fa-fire-burner"></i> Open Kitchen</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+    <!-- OUR MENU SECTION -->
+    <section class="menu-section">
+        <h2 class="section-title-white">Our Menu</h2>
+        <div class="menu-grid-container">
+            <!-- Menu 1 -->
+            <div class="menu-card-img">
+                <img src="../Images/Coffe menu prev.jpeg" alt="Coffee">
+                <div class="menu-overlay">
+                    <span>Specialty Coffee</span>
+                </div>
+            </div>
+            <!-- Menu 2 -->
+            <div class="menu-card-img">
+                <img src="../Images/Strawberry Cake Prev.jpeg" alt="Cake">
+                <div class="menu-overlay">
+                    <span>Dessert & Pastry</span>
+                </div>
+            </div>
+            <!-- Menu 3 -->
+            <div class="menu-card-img">
+                <img src="../Images/Matcha menu prev.jpeg" alt="Matcha">
+                <div class="menu-overlay">
+                    <span>Non Coffee Series</span>
+                </div>
+            </div>
+        </div>
+        <button class="btn-view-more">View more</button>
+    </section>
+
+    <!-- REVIEWS SECTION -->
+<section class="reviews-section">
+    <div class="reviews-overlay">
+        <h2 class="section-title-white">Reviews</h2>
+        <div class="reviews-container">
+            <!-- Review 1 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <img src="../Images/finn wolfhard.jpeg" alt="Finn Wolfhard" class="reviewer-img">
+                    <div class="reviewer-info">
+                        <h4>Finn Wolfhard</h4>
+                        <p>Freelance, author</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="review-text">
+                    This website is totally doing a great job, i love how they shows us a real time situation, keep going!
+                </p>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <img src="../Images/momona tamada.jpeg" alt="Elle Woods" class="reviewer-img">
+                    <div class="reviewer-info">
+                        <h4>Elle Woods</h4>
+                        <p>College Student</p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="review-text">
+                    i'm a student who loved study from cafe, it helps me with the catalog menu, and also i don't have to wate my time, by coming to acrowd coffee shop
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER SECTION -->
+    <footer class="footer-main">
+        <div class="footer-container">
+            <!-- Kolom Contact -->
+            <div class="footer-column">
+                <h3 class="footer-title">Contact us</h3>
+                <div class="footer-item">
+                    <span class="icon-circle"><i class="fa-solid fa-phone"></i></span>
+                    <p>+62 81341845072</p>
+                </div>
+                <a href="mailto:AUSpace@gmail.com" class="footer-link">
+                    <div class="footer-item">
+                        <span class="icon-circle"><i class="fa-solid fa-envelope"></i></span>
+                        <p>AUSpace@gmail.com</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Kolom Socials -->
+            <div class="footer-column">
+                <h3 class="footer-title">Our Socials</h3>
+                
+                <a href="https://www.instagram.com/adoreu.crafts/" target="_blank" class="footer-link">
+                    <div class="footer-item">
+                        <span class="icon-circle"><i class="fa-brands fa-instagram"></i></span>
+                        <p>@AdoreU.Space</p>
+                    </div>
+                </a>
+
+                <a href="https://facebook.com/AdoreU.Space" target="_blank" class="footer-link">
+                    <div class="footer-item">
+                        <span class="icon-circle"><i class="fa-brands fa-facebook-f"></i></span>
+                        <p>@AdoreU.Space</p>
+                    </div>
+                </a>
+
+                <a href="https://tiktok.com/@AdoreU._Space" target="_blank" class="footer-link">
+                    <div class="footer-item">
+                        <span class="icon-circle"><i class="fa-brands fa-tiktok"></i></span>
+                        <p>@AdoreU._Space</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2026 AdoreU Space Powered by Seatscape. All Rights Reserved</p>
+        </div>
+    </footer>
+</body>
+</html>
