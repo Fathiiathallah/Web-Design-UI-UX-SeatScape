@@ -307,6 +307,13 @@
     transition: 0.3s;
 }
 
+.icon-wrapper i {
+    font-size: 26px;
+    display: inline-flex;
+    line-height: 1;
+    transform: translate(0px, -1px); 
+}
+
 .feature-card:hover h3, 
 .feature-card:hover p {
     color: #ffffff;
