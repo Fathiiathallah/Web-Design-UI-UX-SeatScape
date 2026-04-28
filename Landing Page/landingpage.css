@@ -204,7 +204,7 @@
 .hero {
     margin-top: 60px; /* Ruang untuk navbar */
     height: 80vh; /* 80% dari tinggi layar */
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../Images/bg\ landing\ page.jpeg') center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/bg-landing-page.jpeg') center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -689,7 +689,7 @@
 /* --- REVIEWS SECTION WITH BACKGROUND --- */
 .reviews-section {
     position: relative;
-    background: url('image/BG review.jpg') center/cover no-repeat;
+    background: url('../images/BG-review.jpeg') center/cover no-repeat;
     padding: 0;
     overflow: hidden;
 }
@@ -853,4 +853,170 @@
 
 .footer-link:hover {
     opacity: 0.7;
+}
+
+
+/* MOBILE RESPONSIVE FIX */
+@media (max-width: 768px) {
+        .features {
+        padding: 30px 0;
+    }
+
+    .features-title {
+        flex: unset;
+        width: 100%;
+    }
+
+    .features-container {
+        gap: 10px;
+    }
+
+    .features-grid {
+        margin-top: 0;
+    }
+
+    /* HERO */
+    .hero {
+        height: auto;
+        padding: 100px 20px 60px;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+        letter-spacing: 2px;
+    }
+
+    .btn-primary {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    /*  NAVBAR  */
+    .header-container {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-wrapper {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+    }
+
+    .nav-wrapper.active {
+        max-height: 300px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .search-input {
+        width: 100%;
+    }
+
+    .search-input:focus {
+        width: 100%;
+    }
+
+    /* FEATURES  */
+    .features-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .features-title h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* MENU  */
+    .menu-grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-card-img {
+        height: 250px;
+    }
+
+    /* REVIEWS */
+    .reviews-container {
+        flex-direction: column;
+    }
+
+    /* FOOTER */
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 20px;
+        gap: 25px;
+    }
+
+    .footer-column {
+        width: 100%;
+    }
+
+    /* urutan */
+    .footer-column:nth-child(1) {
+        order: 1;
+    }
+
+    .footer-column:nth-child(2) {
+        order: 2;
+    }
+
+    .logo {
+        order: 1;
+    }
+
+    .user-icon {
+        order: 2;
+    }
+
+    .menu-toggle {
+        order: 3;
+    }
+}
+
+/* MOBILE INTERACTION FIX */
+.nav-links a:active,
+.user-icon a:active,
+.btn-primary:active {
+    transform: scale(0.95);
+    opacity: 0.8;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
 }
